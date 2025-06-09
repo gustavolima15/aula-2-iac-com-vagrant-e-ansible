@@ -3,6 +3,12 @@
 Neste repositório, vamos aprender a usar o Vagrant e o Ansible para criar e gerenciar máquinas virtuais.
 Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo invertido"
 
+## Tabela de conteúdos
+
+- [Pré-requisitos](#pré-requisitos)
+- [Passo a passo](#passo-a-passo)
+- [Erros conhecidos](#erros-conhecidos)
+
 ## Pré-requisitos
 
 - Instalação do VirtualBox
@@ -112,4 +118,23 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
     
     `http://localhost:8080`
 
-10.
+
+## Erros conhecidos
+
+No Windows, caso você receba este erro do VirtualBox:
+
+> [!CAUTION]
+VT-x is not available. (VERR_VMX_NO_VMX)
+
+Significa que o **Hyper-V** está habilitado e configurado como virtualizador padrão no Windows, pois ele e o VirtualBox não podem coexistir.
+
+Para resolver isso, você precisa desabilitar o **Hyper-V**, para isso siga estes passos no Terminal:
+
+```bash
+bcdedit /set hypervisorlaunchtype off
+```
+
+Depois de desabilitar o **Hyper-V**, reinicie o computador e tente novamente.
+
+
+
