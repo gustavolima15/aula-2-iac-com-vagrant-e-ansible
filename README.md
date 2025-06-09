@@ -8,6 +8,7 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 - [Pré-requisitos](#pré-requisitos)
 - [Passo a passo](#passo-a-passo)
 - [Erros conhecidos](#erros-conhecidos)
+- [Saiba mais](#saiba-mais)
 
 ## Pré-requisitos
 
@@ -163,5 +164,10 @@ bcdedit /set hypervisorlaunchtype off
 
 Depois de desabilitá-lo, reinicie o computador e tente novamente.
 
+## Saiba mais
 
-
+- [Explorando módulos do Ansible](https://nerdexpert.com.br/explorando-modulos-do-ansible/)
+- [Documentação dos módulos do Ansible](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/index.html)
+- [Documentação do Ansible](https://docs.ansible.com/ansible/latest/index.html)
+- [Documentação do Vagrant](https://www.vagrantup.com/docs)
+- [Documentação do VirtualBox](https://www.virtualbox.org/wiki/Documentation)
