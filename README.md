@@ -118,13 +118,37 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
     
     `http://localhost:8080`
 
+    O resultado esperado é esse:
+
+    ![Mundo Invertido](docs/images/mundo_invertido.png)
+
+10. [Desafio Opcional] Tente usar o módulo `template` para copiar o arquivo `index.html` e fazer uma alteração nele ao invés do módulo `copy`
+
+> [!TIP]
+> Comece criando um arquivo chamado `index.html.j2` no diretório `files`:
+    ```bash
+    code files/index.html.j2
+    ```
+
+11. [Desafio Opcional] Se você terminou de configurar o módulo `template`, você tem pedir para o Vagrant realizar o provisionamento novamente:
+    ```bash
+    vagrant provision
+    ```
+
+12. [Desafio Opcional] Acesse o site novamente e verifique se a alteração foi aplicada:
+    `http://localhost:8080`
+
+13. Se você quiser desprovisionar a máquina virtual, execute o seguinte comando:
+    ```bash
+    vagrant destroy
+    ```
 
 ## Erros conhecidos
 
-No Windows, caso você receba este erro do VirtualBox:
+No **Windows**, caso você receba este erro do VirtualBox:
 
 > [!CAUTION]
-> VT-x is not available. (VERR_VMX_NO_VMX)
+> **VT-x is not available. (VERR_VMX_NO_VMX)**
 
 Significa que o **Hyper-V** está habilitado e configurado como virtualizador padrão no Windows, pois ele e o VirtualBox não podem coexistir.
 
