@@ -22,7 +22,16 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 
 ## Passo a passo 
 
-1. Crie uma pasta/diretório para o projeto (Ex.: `aula-2-iac-com-vagrant-e-ansible`) em sua pasta/diretório de trabalho ou na pasta/diretório de seu usuário
+1. Comece fazendo o clone do repositório:
+    ```bash
+    git clone https://gitlab.com/dvp2025-2/aula-2-iac-com-vagrant-e-ansible.git
+    cd aula-2-iac-com-vagrant-e-ansible
+    ```
+
+    > [!NOTE]
+    > Se você não tem o Git instalado ou não sabe usá-lo, sem problema algum, você pode simplesmente fazer o [download do repositório](https://gitlab.com/dvp2025-2/aula-2-iac-com-vagrant-e-ansible/-/archive/main/aula-2-iac-com-vagrant-e-ansible-main.zip) e descompactá-lo em sua pasta/diretório de trabalho ou na pasta/diretório de seu usuário
+
+2. Crie uma pasta/diretório para o projeto (Ex.: `aula-2-iac-com-vagrant-e-ansible`) em sua pasta/diretório de trabalho ou na pasta/diretório de seu usuário
 
     Se preferir, fazer pelo terminal:
     ```bash
@@ -31,17 +40,17 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
     cd aula-2-iac-com-vagrant-e-ansible
     ```
 
-2. Se você estiver no Windows Explorer, clique com o botão direito do mouse sobre a pasta/diretório criada e selecione "Open in Terminal"
-3. Já dentro do terminal, execute o seguinte comando:
+3. Se você estiver no Windows Explorer, clique com o botão direito do mouse sobre a pasta/diretório criada e selecione "Open in Terminal"
+4. Já dentro do terminal, execute o seguinte comando:
     ```bash
     vagrant init
     ```
     O comando irá gerar um arquivo chamado `Vagrantfile`
-4. Execute o seguinte comando para editar o arquivo `Vagrantfile`:
+5. Execute o seguinte comando para editar o arquivo `Vagrantfile`:
     ```bash
     code .
     ```
-5. Inclua as seguintes informações no arquivo `Vagrantfile`:
+6. Inclua as seguintes informações no arquivo `Vagrantfile`:
     ```ruby
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
@@ -65,7 +74,7 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
     > [!NOTE]
     > Esse arquivo Vagrantfile é o arquivo declarativo que informa ao Vagrant como deve ser a máquina virtual que será criada e como deve ser configurada, usando o Ansible para fazer a configuração
 
-6. Agora vamos criar o arquivo de playbook do Ansible:
+7. Agora vamos criar o arquivo de playbook do Ansible:
     
     ```bash
     code playbook.yml
@@ -73,7 +82,7 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
     > [!NOTE]
     > Esse arquivo playbook.yml é o arquivo declarativo que informa ao Ansible como deve ser o estado desejado do sistema, ou seja, o que o Ansible deve fazer para configurar a máquina virtual e garantir que ela esteja sempre neste estado
 
-7. Agora inclua as seguintes informações no arquivo `playbook.yml`:
+8. Agora inclua as seguintes informações no arquivo `playbook.yml`:
     
 ```yaml
 ---
@@ -110,12 +119,12 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
         state: restarted
 ```
 
-8. Agora podemos iniciar o provisionamento da máquina virtual:
+9. Agora podemos iniciar o provisionamento da máquina virtual:
     ```bash
     vagrant up
     ```
 
-9. Assim que a máquina virtual for provisionada, podemos acessar o site pelo navegador:
+10. Assim que a máquina virtual for provisionada, podemos acessar o site pelo navegador:
     
     `http://localhost:8080`
 
@@ -123,7 +132,7 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 
     ![Mundo Invertido](docs/images/mundo_invertido.png)
 
-10. **[Desafio Opcional]** Tente usar o módulo `template` do Ansible para copiar o arquivo `index.html` e fazer uma alteração nele ao invés do módulo `copy`
+11. **[Desafio Opcional]** Tente usar o módulo `template` do Ansible para copiar o arquivo `index.html` e fazer uma alteração nele ao invés do módulo `copy`
 
 > [!TIP]
 > Comece criando um arquivo chamado `index.html.j2` no diretório `files`:
@@ -134,15 +143,15 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 > [!TIP]
 > Segue a documentação do módulo `template`: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html 
 
-11. **[Desafio Opcional]** Se você terminou de configurar o módulo `template`, você tem pedir para o Vagrant realizar o provisionamento novamente:
+12. **[Desafio Opcional]** Se você terminou de configurar o módulo `template`, você tem pedir para o Vagrant realizar o provisionamento novamente:
     ```bash
     vagrant provision
     ```
 
-12. **[Desafio Opcional]** Acesse o site novamente e verifique se a alteração foi aplicada:
+13. **[Desafio Opcional]** Acesse o site novamente e verifique se a alteração foi aplicada:
     `http://localhost:8080`
 
-13. Se você quiser desprovisionar a máquina virtual, execute o seguinte comando:
+14. Se você quiser desprovisionar a máquina virtual, execute o seguinte comando:
     ```bash
     vagrant destroy
     ```
