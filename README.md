@@ -126,10 +126,9 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 
 > [!TIP]
 > Comece criando um arquivo chamado `index.html.j2` no diretório `files`:
-    
-    ```bash
-    code files/index.html.j2
-    ```
+>    ```bash
+>    code files/index.html.j2
+>    ```
 
 11. [Desafio Opcional] Se você terminou de configurar o módulo `template`, você tem pedir para o Vagrant realizar o provisionamento novamente:
     ```bash
