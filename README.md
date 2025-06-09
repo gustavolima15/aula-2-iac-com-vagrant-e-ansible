@@ -124,7 +124,7 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 No Windows, caso você receba este erro do VirtualBox:
 
 > [!CAUTION]
-VT-x is not available. (VERR_VMX_NO_VMX)
+> VT-x is not available. (VERR_VMX_NO_VMX)
 
 Significa que o **Hyper-V** está habilitado e configurado como virtualizador padrão no Windows, pois ele e o VirtualBox não podem coexistir.
 
