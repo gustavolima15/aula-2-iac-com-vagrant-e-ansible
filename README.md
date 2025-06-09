@@ -128,13 +128,13 @@ No Windows, caso você receba este erro do VirtualBox:
 
 Significa que o **Hyper-V** está habilitado e configurado como virtualizador padrão no Windows, pois ele e o VirtualBox não podem coexistir.
 
-Para resolver isso, você precisa desabilitar o **Hyper-V**, para isso siga estes passos no Terminal:
+Para resolver isso, você precisa desabilitá-lo, para isso siga estes passos no Terminal:
 
 ```bash
 bcdedit /set hypervisorlaunchtype off
 ```
 
-Depois de desabilitar o **Hyper-V**, reinicie o computador e tente novamente.
+Depois de desabilitá-lo, reinicie o computador e tente novamente.
 
 
 
