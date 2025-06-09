@@ -368,7 +368,7 @@ code {
 <h1 id="aula-2---iac-com-vagrant-e-ansible">Aula 2 - IAC com Vagrant e Ansible</h1>
 <p>Neste repositório, vamos aprender a usar o Vagrant e o Ansible para criar e gerenciar máquinas virtuais.
 Também vamos aprender a usar o Ansible para fazer o deploy do site &quot;mundo invertido&quot;</p>
-<p>Este documento também está disponível em formato PDF (docs/README.pdf) e HTML (docs/README.html) para que você possa visualizá-lo offline.</p>
+<p>Este documento também está disponível em <a href="docs/README.pdf">formato PDF</a> e <a href="docs/README.html">formato HTML</a> para que você possa visualizá-lo offline.</p>
 <h2 id="tabela-de-conte%C3%BAdos">Tabela de conteúdos</h2>
 <ul>
 <li><a href="#pr%C3%A9-requisitos">Pré-requisitos</a></li>
@@ -405,14 +405,6 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site &quot;mundo 
 <p>[!NOTE]
 Se você não tem o Git instalado ou não sabe usá-lo, sem problema algum, você pode simplesmente fazer o <a href="https://gitlab.com/dvp2025-2/aula-2-iac-com-vagrant-e-ansible/-/archive/main/aula-2-iac-com-vagrant-e-ansible-main.zip">download do repositório</a> e descompactá-lo em sua pasta/diretório de trabalho ou na pasta/diretório de seu usuário</p>
 </blockquote>
-</li>
-<li>
-<p>Crie uma pasta/diretório para o projeto (Ex.: <code>aula-2-iac-com-vagrant-e-ansible</code>) em sua pasta/diretório de trabalho ou na pasta/diretório de seu usuário</p>
-<p>Se preferir, fazer pelo terminal:</p>
-<pre class="hljs"><code><div><span class="hljs-built_in">cd</span> seu_diretorio_de_trabalho
-mkdir aula-2-iac-com-vagrant<span class="hljs-_">-e</span>-ansible
-<span class="hljs-built_in">cd</span> aula-2-iac-com-vagrant<span class="hljs-_">-e</span>-ansible
-</div></code></pre>
 </li>
 <li>
 <p>Se você estiver no Windows Explorer, clique com o botão direito do mouse sobre a pasta/diretório criada e selecione &quot;Open in Terminal&quot;</p>
@@ -500,7 +492,7 @@ Esse arquivo playbook.yml é o arquivo declarativo que informa ao Ansible como d
         <span class="hljs-attr">name:</span> <span class="hljs-string">nginx</span>
         <span class="hljs-attr">state:</span> <span class="hljs-string">restarted</span>
 </div></code></pre>
-<ol start="9">
+<ol start="8">
 <li>
 <p>Agora podemos iniciar o provisionamento da máquina virtual:</p>
 <pre class="hljs"><code><div>vagrant up
@@ -526,7 +518,7 @@ Comece criando um arquivo chamado <code>index.html.j2</code> no diretório <code
 <p>[!TIP]
 Segue a documentação do módulo <code>template</code>: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html</p>
 </blockquote>
-<ol start="12">
+<ol start="11">
 <li>
 <p><strong>[Desafio Opcional]</strong> Se você terminou de configurar o módulo <code>template</code>, você tem pedir para o Vagrant realizar o provisionamento novamente:</p>
 <pre class="hljs"><code><div>vagrant provision
