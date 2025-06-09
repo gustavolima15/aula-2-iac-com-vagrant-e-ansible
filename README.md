@@ -122,7 +122,7 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 
     ![Mundo Invertido](docs/images/mundo_invertido.png)
 
-10. [Desafio Opcional] Tente usar o módulo `template` para copiar o arquivo `index.html` e fazer uma alteração nele ao invés do módulo `copy`
+10. **[Desafio Opcional]** Tente usar o módulo `template` para copiar o arquivo `index.html` e fazer uma alteração nele ao invés do módulo `copy`
 
 > [!TIP]
 > Comece criando um arquivo chamado `index.html.j2` no diretório `files`:
@@ -130,12 +130,12 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 >    code files/index.html.j2
 >    ```
 
-11. [Desafio Opcional] Se você terminou de configurar o módulo `template`, você tem pedir para o Vagrant realizar o provisionamento novamente:
+11. **[Desafio Opcional]** Se você terminou de configurar o módulo `template`, você tem pedir para o Vagrant realizar o provisionamento novamente:
     ```bash
     vagrant provision
     ```
 
-12. [Desafio Opcional] Acesse o site novamente e verifique se a alteração foi aplicada:
+12. **[Desafio Opcional]** Acesse o site novamente e verifique se a alteração foi aplicada:
     `http://localhost:8080`
 
 13. Se você quiser desprovisionar a máquina virtual, execute o seguinte comando:
