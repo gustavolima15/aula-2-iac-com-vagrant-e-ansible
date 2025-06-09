@@ -126,6 +126,7 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 
 > [!TIP]
 > Comece criando um arquivo chamado `index.html.j2` no diretório `files`:
+    
     ```bash
     code files/index.html.j2
     ```
