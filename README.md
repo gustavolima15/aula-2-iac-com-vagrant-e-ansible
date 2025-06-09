@@ -3,7 +3,7 @@
 Neste repositório, vamos aprender a usar o Vagrant e o Ansible para criar e gerenciar máquinas virtuais.
 Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo invertido"
 
-Este documento também está disponível em formato PDF (docs/README.pdf) e HTML (docs/README.html) para que você possa visualizá-lo offline.
+Este documento também está disponível em [formato PDF](docs/README.pdf) e [formato HTML](docs/README.html) para que você possa visualizá-lo offline.
 
 ## Tabela de conteúdos
 
