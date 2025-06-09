@@ -122,13 +122,16 @@ Também vamos aprender a usar o Ansible para fazer o deploy do site "mundo inver
 
     ![Mundo Invertido](docs/images/mundo_invertido.png)
 
-10. **[Desafio Opcional]** Tente usar o módulo `template` para copiar o arquivo `index.html` e fazer uma alteração nele ao invés do módulo `copy`
+10. **[Desafio Opcional]** Tente usar o módulo `template` do Ansible para copiar o arquivo `index.html` e fazer uma alteração nele ao invés do módulo `copy`
 
 > [!TIP]
 > Comece criando um arquivo chamado `index.html.j2` no diretório `files`:
 >    ```bash
 >    code files/index.html.j2
 >    ```
+
+> [!TIP]
+> Segue a documentação do módulo `template`: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html 
 
 11. **[Desafio Opcional]** Se você terminou de configurar o módulo `template`, você tem pedir para o Vagrant realizar o provisionamento novamente:
     ```bash
