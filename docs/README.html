@@ -421,7 +421,10 @@ Se você não tem o Git instalado ou não sabe usá-lo, sem problema algum, voc�
 </div></code></pre>
 </li>
 <li>
-<p>Inclua as seguintes informações no arquivo <code>Vagrantfile</code>:</p>
+<p>Apague todas as informações que já estiverem no arquivo <code>Vagrantfile</code></p>
+</li>
+<li>
+<p>E substitua por essas informações:</p>
 <pre class="hljs"><code><div><span class="hljs-comment"># -*- mode: ruby -*-</span>
 <span class="hljs-comment"># vi: set ft=ruby :</span>
 
@@ -448,8 +451,7 @@ Esse arquivo Vagrantfile é o arquivo declarativo que informa ao Vagrant como de
 </li>
 <li>
 <p>Agora vamos criar o arquivo de playbook do Ansible:</p>
-<pre class="hljs"><code><div>code playbook.yml
-</div></code></pre>
+<p>Dentro do Visual Studio Code, crie um arquivo chamado <code>playbook.yml</code></p>
 <blockquote>
 <p>[!NOTE]
 Esse arquivo playbook.yml é o arquivo declarativo que informa ao Ansible como deve ser o estado desejado do sistema, ou seja, o que o Ansible deve fazer para configurar a máquina virtual e garantir que ela esteja sempre neste estado</p>
@@ -492,7 +494,7 @@ Esse arquivo playbook.yml é o arquivo declarativo que informa ao Ansible como d
         <span class="hljs-attr">name:</span> <span class="hljs-string">nginx</span>
         <span class="hljs-attr">state:</span> <span class="hljs-string">restarted</span>
 </div></code></pre>
-<ol start="8">
+<ol start="9">
 <li>
 <p>Agora podemos iniciar o provisionamento da máquina virtual:</p>
 <pre class="hljs"><code><div>vagrant up
@@ -502,7 +504,7 @@ Esse arquivo playbook.yml é o arquivo declarativo que informa ao Ansible como d
 <p>Assim que a máquina virtual for provisionada, podemos acessar o site pelo navegador:</p>
 <p><code>http://localhost:8080</code></p>
 <p>O resultado esperado é esse:</p>
-<p><img src="images/mundo_invertido.png" alt="Mundo Invertido"></p>
+<p><img src="docs/images/mundo_invertido.png" alt="Mundo Invertido"></p>
 </li>
 <li>
 <p><strong>[Desafio Opcional]</strong> Tente usar o módulo <code>template</code> do Ansible para copiar o arquivo <code>index.html</code> e fazer uma alteração nele ao invés do módulo <code>copy</code></p>
@@ -518,7 +520,7 @@ Comece criando um arquivo chamado <code>index.html.j2</code> no diretório <code
 <p>[!TIP]
 Segue a documentação do módulo <code>template</code>: https://docs.ansible.com/ansible/latest/collections/ansible/builtin/template_module.html</p>
 </blockquote>
-<ol start="11">
+<ol start="12">
 <li>
 <p><strong>[Desafio Opcional]</strong> Se você terminou de configurar o módulo <code>template</code>, você tem pedir para o Vagrant realizar o provisionamento novamente:</p>
 <pre class="hljs"><code><div>vagrant provision
